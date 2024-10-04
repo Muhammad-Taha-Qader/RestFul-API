@@ -30,6 +30,17 @@ app.post('/profile', (req, res) => {
   });
 });
 
+// GET request to return all profiles
+app.get('/profiles', (req, res) => {
+  fs.readFile('profiles.json', 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Could not read profiles' });
+    }
+    const profiles = data.trim().split('\n').map(line => JSON.parse(line));
+    res.status(200).json(profiles);
+  });
+});
+
 // Start the server
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
