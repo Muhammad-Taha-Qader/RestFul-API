@@ -4,7 +4,7 @@ This is a simple Node.js API that handles web requests using HTTP or Express.js.
 
 ## Features
 
-- **GET** request to return a simple greeting (`Hello, Amjad`).
+- **GET** request to return a simple greeting (`Hello, Taha`).
 - **POST** request to accept and validate a professional profile in JSON format.
 - **Validation**: Checks that required fields (`Name`, `Title`, `TargetedKeywords`, `Education`, `Certification`, `Contact`) are provided.
 - **Save/Append** the profile data to a file (`profiles.json`).
@@ -12,13 +12,13 @@ This is a simple Node.js API that handles web requests using HTTP or Express.js.
 
 ## Endpoints
 
-### 1. GET /hello/amjad
-Returns the string `Hello, Amjad`.
+### 1. GET /hello/taha
+Returns the string `Hello, Taha`.
 
-- **URL**: `/hello/amjad`
+- **URL**: `/hello/taha`
 - **Method**: `GET`
 - **Response**: 
-  - 200 OK: `Hello, Amjad`
+  - 200 OK: `Hello, Taha`
   - 404 Not Found: If the URL is incorrect.
 
 ### 2. POST /profile
@@ -30,7 +30,7 @@ Accepts a professional profile in JSON format, validates it, and saves it to a f
 - **Body**: A JSON object with the following required fields:
   ```json
     {
-    "Name": "Amjad",
+    "Name": "Taha",
     "Title": "Software Engineer",
     "TargetedKeywords": ["Node.js", "Backend"],
     "Education": [
@@ -42,7 +42,7 @@ Accepts a professional profile in JSON format, validates it, and saves it to a f
         }
     ],
     "Certification": "AWS Certified",
-    "Contact": "amjad@example.com"
+    "Contact": "Taha@example.com"
     }
  
 - **Response**: 
@@ -74,10 +74,10 @@ The server will start running on `http://localhost:3000`.
 Since web browsers typically only support sending GET requests via the address bar, to test POST requests (like the /profile route), you can use a tool like Postman or cURL.
 ### Using Postman
 
-1. **GET** `/hello/amjad`: 
+1. **GET** `/hello/taha`: 
    - Set the method to `GET`.
-   - Enter the URL `http://localhost:3000/hello/amjad`.
-   - Send the request and you should receive a `Hello, Amjad` response.
+   - Enter the URL `http://localhost:3000/hello/taha`.
+   - Send the request and you should receive a `Hello, Taha` response.
 
 2. **POST** `/profile`: 
    - Set the method to `POST`.
@@ -92,9 +92,9 @@ Since web browsers typically only support sending GET requests via the address b
    - Send the request to get the list of saved profiles.
 
 ### Using curl
-1. **GET** `/hello/amjad`:
+1. **GET** `/hello/taha`:
    ```bash
-   curl http://localhost:3000/hello/amjad
+   curl http://localhost:3000/hello/taha
    ```
 
 2. **POST** `/profile`:
@@ -102,12 +102,12 @@ Since web browsers typically only support sending GET requests via the address b
    curl -X POST http://localhost:3000/profile \
    -H "Content-Type: application/json" \
    -d '{
-     "Name": "Amjad",
+     "Name": "Taha",
      "Title": "Software Engineer",
      "TargetedKeywords": ["Node.js", "Backend"],
      "Education": [...],
      "Certification": "AWS Certified",
-     "Contact": "amjad@example.com"
+     "Contact": "Taha@example.com"
    }'
    ```
 
